@@ -1,0 +1,13 @@
+@model BaiThuchanh.Models.Bai1
+
+@{
+    ViewData["Title"] = "Kết quả Bài 1";
+}
+
+<h2>Kết quả thông tin người dùng</h2>
+
+<p><b>Họ tên:</b> @Model.hoTen</p>
+<p><b>Năm sinh:</b> @Model.namSinh</p>
+<p><b>Tuổi:</b> @Model.tinhTuoi()</p>
+
+<a asp-action="Index">Thử lại</a>

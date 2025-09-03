@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Bài 2";
+}
+
+<h2>Tính</h2>
+
+<form asp-action="Index" method="post">
+    <label>Số A:</label>
+    <input type="number" step="any" name="SoA">
+    <label>Số B:</label>
+    <input type="number" step="any" name="SoB">
+    <label>Phép toán:</label>
+    <select name="PhepToan">
+        <option value="Tong">Cộng</option>
+        <option value="Hieu">Trừ</option>
+        <option value="Tich">Nhân</option>
+        <option value="Thuong">Chia</option>
+    </select>
+    <input type="submit" value="Tính">
+</form>
+
+<h1>@ViewBag.Message</h1>
