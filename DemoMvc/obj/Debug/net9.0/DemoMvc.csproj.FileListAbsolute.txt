@@ -95,3 +95,4 @@ D:\git_PTPMQL\PhatTrienPMQL2526\DemoMvc\obj\Debug\net9.0\refint\DemoMvc.dll
 D:\git_PTPMQL\PhatTrienPMQL2526\DemoMvc\obj\Debug\net9.0\DemoMvc.pdb
 D:\git_PTPMQL\PhatTrienPMQL2526\DemoMvc\obj\Debug\net9.0\DemoMvc.genruntimeconfig.cache
 D:\git_PTPMQL\PhatTrienPMQL2526\DemoMvc\obj\Debug\net9.0\ref\DemoMvc.dll
+D:\git_PTPMQL\PhatTrienPMQL2526\DemoMvc\obj\Debug\net9.0\DemoMvc.csproj.AssemblyReference.cache
