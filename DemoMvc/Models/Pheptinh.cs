@@ -4,7 +4,7 @@ namespace Demomvc.Models
     {
         public double SoA { get; set; }
         public double SoB { get; set; }
-        public string Pheptoan { get; set; }
+        public required string Pheptoan { get; set; }
         public double Ketqua { get; set; }
 
         public void Tinh()

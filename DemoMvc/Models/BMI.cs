@@ -5,7 +5,7 @@ namespace DemoMvc.Models
         public double Cannang { get; set; }
         public double Chieucao { get; set; }
         public double ChisoBMI { get; set; }
-        public string Phanloai { get; set; }
+        public required string Phanloai { get; set; }
 
         public void Tinh()
         {
