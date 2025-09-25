@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using DemoMvc.Models;
 using DemoMvc.Data;
 using MvcMovie.Models;
+using DemoMvc.Helpers;  
+
 
 namespace DemoMvc.Controllers
 {
@@ -18,13 +20,28 @@ namespace DemoMvc.Controllers
             var model = await _context.Persons.ToListAsync();
             return View(model);
         }
-        public IActionResult Create() {
+
+        //gọi CodeGenerator để sinh mã mới trong Action Create (GET) và truyền mã này về View.
+        public IActionResult Create()
+        {
+            // Lấy bản ghi mới nhất (nếu có)
+            var lastPerson = _context.Persons
+                .OrderByDescending(p => p.PersonId)
+                .FirstOrDefault();
+
+            // Sinh mã mới
+            string newId = CodeGenerator.GenerateNextCode(lastPerson.PersonId, "STD", 3);
+
+            // Truyền sang View qua ViewBag
+            ViewBag.NewId = newId;
+
             return View();
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonID,FullName,Address")] Person person) {
+        public async Task<IActionResult> Create([Bind("PersonId,FullName,Address")] Person person) {
             if (ModelState.IsValid)
             {
                 _context.Add(person);
